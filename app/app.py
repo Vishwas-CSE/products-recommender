@@ -14,12 +14,12 @@ import pickle
 import json
 
 # load the nlp model and tfidf vectorizer from disk
-filename = './data/product_sentiment_model.pkl'
+filename = 'data/product_sentiment_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
-vectorizer = pickle.load(open('./data/tfidf_vectorizer.pkl', 'rb'))
+vectorizer = pickle.load(open('data/tfidf_vectorizer.pkl', 'rb'))
 
 def get_data():
-    data = pd.read_csv('./data/final_data.csv')
+    data = pd.read_csv('data/final_data.csv')
     return data
 
 
@@ -117,6 +117,6 @@ def recommend():
 
         return render_template('recommend.html', product_cards=product_cards)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+#
+# if __name__ == '__main__':
+#     app.run(debug=True)
