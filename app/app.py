@@ -12,14 +12,25 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import pickle
 import json
-
+from os import path
 # load the nlp model and tfidf vectorizer from disk
-filename = 'data/product_sentiment_model.pkl'
-clf = pickle.load(open(filename, 'rb'))
-vectorizer = pickle.load(open('data/tfidf_vectorizer.pkl', 'rb'))
+
+
+def get_abs_path(*paths):
+    abs_path = path.abspath(path.join(*paths))
+    return abs_path
+
+
+model_pickle_file = get_abs_path('app/data/product_sentiment_model.pkl')
+vectorizer_file = get_abs_path('app/data/tfidf_vectorizer.pkl')
+data_file = get_abs_path('app/data/final_data.csv')
+
+clf = pickle.load(open(model_pickle_file, 'rb'))
+vectorizer = pickle.load(open(vectorizer_file, 'rb'))
+
 
 def get_data():
-    data = pd.read_csv('data/final_data.csv')
+    data = pd.read_csv(data_file)
     return data
 
 
