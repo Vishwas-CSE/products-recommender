@@ -3,3 +3,4 @@ flask
 sklearn
 requests
 xgboost
+gunicorn
