@@ -31,7 +31,7 @@
 
     <center><h1 style=""> Product Recommendation System</h1></center>
     <div align="centre" class="form-group shadow-textarea" style="margin-top: 30px;text-align: center;color: white;">
-        <form action="http://localhost:5000/recommend" method="POST">
+        <form action="/recommend" method="POST">
 <!--            <input type="text" name="user" class="movie form-control" id="autocomplete" autocomplete="on"-->
 <!--                   placeholder="Enter the User Name"-->
 <!--                   style="background-color: #ffffff;border-color:#ffffff;width: 60%;color: #181818"-->
@@ -43,7 +43,7 @@
 <!--                        >Enter-->
 <!--                </input>-->
 <!--            </div>-->
-                <form onsubmit="/recommend">
+<!--                <form onsubmit="/recommend">-->
                 <div class="form-group shadow-textarea" style="margin-top: 30px;text-align: center;color: white;">
                 <input type="text" name="user" class="movie form-control" id="autoComplete" autocomplete="off" placeholder="Enter the User Name" style="background-color: #ffffff;border-color:#ffffff;width: 60%;color: #181818" required="required" />
                 <br>
@@ -52,7 +52,7 @@
                 <div class="form-group" style="text-align: center;">
                   <button class="btn btn-primary btn-block user-button" style="background-color: #e50914;text-align: center;border-color: #e50914;width:120px;" type="submit" >Enter</button><br><br>
                 </div>
-                </form>
+<!--                </form>-->
 
           <div id="loader" class="text-center">
 
