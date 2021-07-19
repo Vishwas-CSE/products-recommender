@@ -23,7 +23,7 @@ def get_abs_path(*paths):
 
 model_pickle_file = get_abs_path('app/data/product_sentiment_model.pkl')
 vectorizer_file = get_abs_path('app/data/tfidf_vectorizer.pkl')
-data_file = get_abs_path('app/data/final_data.csv')
+data_file = get_abs_path('app/data/product_data.csv')
 
 clf = pickle.load(open(model_pickle_file, 'rb'))
 vectorizer = pickle.load(open(vectorizer_file, 'rb'))
